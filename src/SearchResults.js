@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+import Customer from "./Customer";
 
 const SearchResults = props => {
   return (
@@ -14,23 +14,11 @@ const SearchResults = props => {
       </thead>
       <tbody>
         {props.results.map(customer => (
-          <tr>
-            <td>{customer.firstName}</td>
-            <td>{customer.surname}</td>
-            <td>{customer.roomId}</td>
-            <td>{getDays(customer.checkInDate, customer.checkOutDate)}</td>
-          </tr>
+          <Customer customer={customer} />
         ))}
       </tbody>
     </table>
   );
 };
-
-function getDays(startDate, endDate) {
-  var a = moment(endDate);
-  var b = moment(startDate);
-
-  return a.diff(b, "days");
-}
 
 export default SearchResults;
