@@ -10,7 +10,9 @@ const Bookings = () => {
     const guests = FakeBookings;
 
     const filteredGuests = guests.filter(guest => {
-      return guest.firstName.toLowerCase() === searchVal.toLowerCase();
+      return (
+        guest.firstName.toLowerCase().indexOf(searchVal.toLowerCase()) !== -1
+      );
     });
 
     setBookings(filteredGuests);
