@@ -2,7 +2,6 @@ import React from "react";
 import moment from "moment";
 
 const SearchResults = props => {
-  console.log({ results: props.results });
   return (
     <table class="table">
       <thead>

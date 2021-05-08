@@ -4,10 +4,16 @@ import SearchResults from "./SearchResults.js";
 import FakeBookings from "./data/fakeBookings.json";
 
 const Bookings = () => {
-  const [bookings, setBookings] = useState(FakeBookings);
+  const [bookings, setBookings] = useState([]);
 
   const search = searchVal => {
-    console.info("TO DO!", searchVal);
+    const guests = FakeBookings;
+
+    const filteredGuests = guests.filter(guest => {
+      return guest.firstName.toLowerCase() === searchVal.toLowerCase();
+    });
+
+    setBookings(filteredGuests);
   };
 
   return (
