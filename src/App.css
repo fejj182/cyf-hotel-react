@@ -56,5 +56,19 @@ tr {
 }
 
 .card {
-  width: 18rem;
+  height: auto;
+  width: 22rem;
+  text-align: center;
+  color: black;
+  margin: 30px;
+}
+
+.cards {
+  display: flex;
+  /* justify-content: center; */
+}
+
+a:hover {
+  /* color: black; */
+  text-decoration: none;
 }
