@@ -76,3 +76,8 @@ a:hover {
 .active-row {
   background: aquamarine;
 }
+
+.customer-profile {
+  border: dodgerblue 4px solid;
+  padding: 0.5rem;
+}
